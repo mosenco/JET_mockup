@@ -1,0 +1,32 @@
+version: 2
+
+models:
+  - name: stg_user
+    description: user basic information
+    columns:
+      - name: client_id
+        description: primary key
+        tests:
+          - unique
+          - not_null
+      - name: registration_date
+        description: datetime when user registered to the platform
+        tests:
+          - not_null
+      - name: gender
+        description: user's gender
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['M', 'F', 'other']
+      - name: birthday
+        description: user's birthday
+        tests:
+          - not_null
+      - name: username
+        description: user's username defined during registration
+        tests:
+          - unique
+          - not_null
+
+

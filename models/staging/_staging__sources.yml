@@ -1,0 +1,33 @@
+version: 2
+
+sources:
+  - name: dataset_01
+    description: customer, restaurant, orders tables source
+    database: bigquery-sandbox-01-454315
+    tables:
+      - name: user
+        description: user information made during registration
+        columns:
+          - name: customer_id
+            description: primary key
+            tests:
+              - unique
+              - not_null
+              
+      - name: restaurants
+        description: restaurant basic information
+        columns:
+          - name: restaurant_id
+            description: primary key
+            tests:
+              - not_null
+              - unique
+      - name: transactions
+        description: transactions made by all users
+        columns:
+          - name: transaction_id
+            description: primary key
+            tests:
+              - not_null
+              - unique
+              
