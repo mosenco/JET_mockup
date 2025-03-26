@@ -8,6 +8,6 @@ sold_italian_food as (
     from {{ ref('int_sold_italian_food') }}
 )
 
-select sold_indian, sold_pizza
+select sold_indian, sold_pizza, transaction_date
 from sold_indian_food
 inner join sold_italian_food using (transaction_date)
