@@ -9,6 +9,6 @@ restaurant as (
 )
 
 
-select average_transaction, restaurant_name
+select average_transaction, brand
 from last_seven_average
 left join restaurant using (restaurant_id)

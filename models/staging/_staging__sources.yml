@@ -24,6 +24,7 @@ sources:
               - unique
       - name: transactions
         description: transactions made by all users
+        identifier: transactions_2
         columns:
           - name: transaction_id
             description: primary key
